@@ -8,12 +8,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Getter @Setter @ToString
+@Setter @ToString
 public class Customer {
 
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,5 +31,26 @@ public class Customer {
 	
 	@Column(name = "create_dt")
 	private LocalDate createDt;
+	
+	
+	public LocalDate getCreateDt() {
+		return createDt;
+	}
+	
+	public int getCustomerId() {
+		return customerId;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
+	
+	public String getName() {
+		return name;
+	}
 	
 }
